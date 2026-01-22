@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { Mail, Github, Linkedin, ArrowRight } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -12,7 +13,9 @@ const Footer = () => {
           href="mailto:your@email.com" 
           className="hover:opacity-70 transition-opacity flex items-center gap-2"
         >
-          📧 EMAIL
+          <Mail size={16} />
+          <span>EMAIL</span>
+          <ArrowRight size={14} className="ml-1" />
         </Link>
         <Link 
           href="https://github.com/yourusername" 
@@ -20,7 +23,9 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="hover:opacity-70 transition-opacity flex items-center gap-2"
         >
-          🔗 GITHUB
+          <Github size={16} />
+          <span>GITHUB</span>
+          <ArrowRight size={14} className="ml-1" />
         </Link>
         <Link 
           href="https://linkedin.com/in/yourusername" 
@@ -28,7 +33,9 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="hover:opacity-70 transition-opacity flex items-center gap-2"
         >
-          💼 LINKEDIN
+          <Linkedin size={16} />
+          <span>LINKEDIN</span>
+          <ArrowRight size={14} className="ml-1" />
         </Link>
       </div>
 

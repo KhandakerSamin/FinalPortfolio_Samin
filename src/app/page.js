@@ -8,6 +8,9 @@ import Hero from '@/components/Hero';
 const page = () => {
   return (
     <div className="min-h-screen">
+      {/* Sticky Logo (top center) */}
+      <Logo />
+      
       {/* Sticky Navigation (corners) */}
       <Navbar />
       
@@ -18,10 +21,7 @@ const page = () => {
       <ScrollProgress />
       
       {/* Main Content Area - Scrollable */}
-      <main className="max-w-4xl mx-auto px-8 pt-4">
-        {/* Logo - Not sticky, scrolls with content */}
-        <Logo />
-        
+      <main className="max-w-4xl mx-auto px-8">
         {/* Hero Section */}
         <Hero />
         

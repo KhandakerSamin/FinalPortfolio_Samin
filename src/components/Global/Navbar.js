@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { Home, Briefcase, User, ArrowRight } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
@@ -43,36 +44,38 @@ const Navbar = () => {
       <nav className="fixed top-6 left-6 z-50 flex flex-col gap-3 text-sm">
         <Link 
           href="/" 
-          className="hover:opacity-70 transition-opacity"
+          className="hover:opacity-70 transition-opacity flex items-center gap-2"
         >
-          🏠 HOME
+          <Home size={16} />
+          <span>HOME</span>
+          <ArrowRight size={14} className="ml-1" />
         </Link>
         <Link 
           href="#projects" 
-          className="hover:opacity-70 transition-opacity"
+          className="hover:opacity-70 transition-opacity flex items-center gap-2"
         >
-          💼 PROJECTS
+          <Briefcase size={16} />
+          <span>PROJECTS</span>
+          <ArrowRight size={14} className="ml-1" />
         </Link>
         <Link 
           href="#about" 
-          className="hover:opacity-70 transition-opacity"
+          className="hover:opacity-70 transition-opacity flex items-center gap-2"
         >
-          👤 ABOUT
+          <User size={16} />
+          <span>ABOUT</span>
+          <ArrowRight size={14} className="ml-1" />
         </Link>
       </nav>
 
-      {/* Top Right - Location, Time, and Theme Toggle */}
+      {/* Top Right - Location, Date, Time, and Theme Toggle */}
       <div className="fixed top-6 right-6 z-50 flex flex-col items-end gap-2 text-sm">
-        <div className="flex items-center gap-3">
-          <div className="text-right">
-            <div className="font-medium">DHAKA, BD</div>
-            <div className="text-xs opacity-80">{date}</div>
-          </div>
-          <ThemeToggle />
-        </div>
-        <div className="font-mono text-lg tabular-nums">
+        <div className="font-medium">DHAKA, BD</div>
+        <div className="text-xs opacity-80">{date}</div>
+        <div className="font-mono text-base tabular-nums">
           {time}
         </div>
+        <ThemeToggle />
       </div>
     </>
   );
