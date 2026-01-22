@@ -9,6 +9,7 @@ const ThemeToggle = () => {
   useEffect(() => {
     // Check localStorage for saved theme
     const savedTheme = localStorage.getItem('theme') || 'light';
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(savedTheme);
     document.documentElement.setAttribute('data-theme', savedTheme);
   }, []);
@@ -23,7 +24,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="w-8 h-8 flex items-center justify-center rounded-full border border-current hover:opacity-70 transition-all"
+      className="w-8 h-8 flex items-center justify-center  hover:opacity-70 transition-all"
       aria-label="Toggle theme"
       title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
     >

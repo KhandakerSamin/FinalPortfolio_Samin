@@ -10,6 +10,7 @@ const Logo = () => {
   useEffect(() => {
     // Check initial theme
     const savedTheme = localStorage.getItem('theme') || 'light';
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(savedTheme);
 
     // Listen for theme changes

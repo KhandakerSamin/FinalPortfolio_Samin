@@ -15,7 +15,6 @@ const Footer = () => {
         >
           <Mail size={16} />
           <span>EMAIL</span>
-          <ArrowRight size={14} className="ml-1" />
         </Link>
         <Link 
           href="https://github.com/yourusername" 
@@ -25,7 +24,6 @@ const Footer = () => {
         >
           <Github size={16} />
           <span>GITHUB</span>
-          <ArrowRight size={14} className="ml-1" />
         </Link>
         <Link 
           href="https://linkedin.com/in/yourusername" 
@@ -35,7 +33,6 @@ const Footer = () => {
         >
           <Linkedin size={16} />
           <span>LINKEDIN</span>
-          <ArrowRight size={14} className="ml-1" />
         </Link>
       </div>
 

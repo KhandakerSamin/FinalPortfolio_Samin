@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Home, Briefcase, User, ArrowRight } from 'lucide-react';
+import {  ArrowRight, CornerDownRight } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
@@ -46,25 +46,23 @@ const Navbar = () => {
           href="/" 
           className="hover:opacity-70 transition-opacity flex items-center gap-2"
         >
-          <Home size={16} />
+          <CornerDownRight size={14} />
           <span>HOME</span>
-          <ArrowRight size={14} className="ml-1" />
         </Link>
         <Link 
           href="#projects" 
           className="hover:opacity-70 transition-opacity flex items-center gap-2"
         >
-          <Briefcase size={16} />
+          <CornerDownRight size={14} />
           <span>PROJECTS</span>
-          <ArrowRight size={14} className="ml-1" />
         </Link>
         <Link 
           href="#about" 
           className="hover:opacity-70 transition-opacity flex items-center gap-2"
         >
-          <User size={16} />
+          <CornerDownRight
+            size={14}/>
           <span>ABOUT</span>
-          <ArrowRight size={14} className="ml-1" />
         </Link>
       </nav>
 
