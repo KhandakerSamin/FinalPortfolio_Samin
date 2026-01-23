@@ -5,6 +5,7 @@ import Logo from '@/components/Global/Logo';
 import ScrollProgress from '@/components/Global/ScrollProgress';
 import Hero from '@/components/Hero';
 import Skills from '@/components/Skills';
+import FeaturedProjects from '@/components/FeaturedProjects';
 
 const page = () => {
   return (
@@ -28,13 +29,13 @@ const page = () => {
         
         {/* Skills Section */}
         <Skills />
-        
-        {/* Placeholder sections to demonstrate scroll */}
-        <section id="projects" className="min-h-screen py-20">
-          <h2 className="text-4xl font-bold mb-8">Projects</h2>
-          <p className="text-lg opacity-80">Your projects will be displayed here...</p>
-        </section>
-        
+      </main>
+
+      {/* Featured Projects Section - Full Width */}
+      <FeaturedProjects />
+
+      {/* Main Content Continued */}
+      <main className="max-w-4xl mx-auto px-8">
         <section id="about" className="min-h-screen py-20">
           <h2 className="text-4xl font-bold mb-8">About</h2>
           <p className="text-lg opacity-80">Your about section will be displayed here...</p>
