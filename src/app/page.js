@@ -4,6 +4,7 @@ import Footer from '@/components/Global/Footer';
 import Logo from '@/components/Global/Logo';
 import ScrollProgress from '@/components/Global/ScrollProgress';
 import Hero from '@/components/Hero';
+import Skills from '@/components/Skills';
 
 const page = () => {
   return (
@@ -24,6 +25,9 @@ const page = () => {
       <main className="max-w-4xl mx-auto px-8">
         {/* Hero Section */}
         <Hero />
+        
+        {/* Skills Section */}
+        <Skills />
         
         {/* Placeholder sections to demonstrate scroll */}
         <section id="projects" className="min-h-screen py-20">
