@@ -6,6 +6,7 @@ import ScrollProgress from '@/components/Global/ScrollProgress';
 import Hero from '@/components/Hero';
 import Skills from '@/components/Skills';
 import FeaturedProjects from '@/components/FeaturedProjects';
+import Contact from '@/components/Contact';
 
 const page = () => {
   return (
@@ -40,6 +41,9 @@ const page = () => {
           <h2 className="text-4xl font-bold mb-8">About</h2>
           <p className="text-lg opacity-80">Your about section will be displayed here...</p>
         </section>
+
+        {/* Contact Section */}
+        <Contact />
       </main>
     </div>
   );

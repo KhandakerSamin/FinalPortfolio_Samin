@@ -79,7 +79,7 @@ const FeaturedProjects = () => {
               {/* Main Images Row */}
               <div className="grid grid-cols-3 gap-2 p-4 pt-16">
                 {project.mainImages.map((img, idx) => (
-                  <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                  <div key={idx} className="relative aspect-4/3 overflow-hidden rounded-lg">
                     <Image
                       src={img}
                       alt={`${project.title} - Image ${idx + 1}`}
@@ -100,7 +100,7 @@ const FeaturedProjects = () => {
               {/* Thumbnail Images */}
               <div className="grid grid-cols-4 gap-2 px-4 pb-4">
                 {project.thumbnails.map((img, idx) => (
-                  <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded">
+                  <div key={idx} className="relative aspect-4/3 overflow-hidden rounded">
                     <Image
                       src={img}
                       alt={`${project.title} - Thumbnail ${idx + 1}`}
@@ -166,3 +166,7 @@ const FeaturedProjects = () => {
 };
 
 export default FeaturedProjects;
+import Contact from '@/components/Contact';
+
+// Then in your component:
+<Contact />
