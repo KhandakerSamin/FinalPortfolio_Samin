@@ -15,7 +15,7 @@ const FeaturedProjects = () => {
       description: 'Transforming ideas into dynamic, user-friendly digital experiences with modern web technologies',
       tags: ['React', 'Node.js', 'MongoDB'],
       mainImages: ['/p1-1.png', '/p1-1.png', '/p1-1.png'],
-      thumbnails: ['/p1-1.png', '/p1-1.png', '/p1-1.png', '/p1-1.png'],
+      thumbnails: ['/p1-1.png', '/p1-1.png', '/p1-1.png'],
       link: '#'
     },
     {
@@ -24,7 +24,7 @@ const FeaturedProjects = () => {
       description: 'A sleek and modern portfolio showcasing creative work and technical expertise',
       tags: ['Next.js', 'Tailwind', 'Framer Motion'],
       mainImages: ['/p1-1.png', '/p1-1.png', '/p1-1.png'],
-      thumbnails: ['/p1-1.png', '/p1-1.png', '/p1-1.png', '/p1-1.png'],
+      thumbnails: ['/p1-1.png', '/p1-1.png', '/p1-1.png'],
       link: '#'
     },
     {
@@ -33,13 +33,13 @@ const FeaturedProjects = () => {
       description: 'Real-time analytics and insights for social media management and growth',
       tags: ['React', 'TypeScript', 'API'],
       mainImages: ['/p1-1.png', '/p1-1.png', '/p1-1.png'],
-      thumbnails: ['/p1-1.png', '/p1-1.png', '/p1-1.png', '/p1-1.png'],
+      thumbnails: ['/p1-1.png', '/p1-1.png', '/p1-1.png'],
       link: '#'
     }
   ];
 
   return (
-    <section id="projects" className="py-20 px-8">
+    <section id="projects" className="py-20 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-16">
@@ -98,7 +98,7 @@ const FeaturedProjects = () => {
               </div>
 
               {/* Thumbnail Images */}
-              <div className="grid grid-cols-4 gap-2 px-4 pb-4">
+              <div className="grid grid-cols-3 gap-2 px-4 pb-4">
                 {project.thumbnails.map((img, idx) => (
                   <div key={idx} className="relative aspect-4/3 overflow-hidden rounded">
                     <Image
