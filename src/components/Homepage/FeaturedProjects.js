@@ -15,7 +15,6 @@ const FeaturedProjects = () => {
       description: 'Transforming ideas into dynamic, user-friendly digital experiences with modern web technologies',
       tags: ['React', 'Node.js', 'MongoDB'],
       mainImages: ['/p1-1.png', '/p1-1.png', '/p1-1.png'],
-      thumbnails: ['/p1-1.png', '/p1-1.png', '/p1-1.png'],
       link: '#'
     },
     {
@@ -24,7 +23,6 @@ const FeaturedProjects = () => {
       description: 'A sleek and modern portfolio showcasing creative work and technical expertise',
       tags: ['Next.js', 'Tailwind', 'Framer Motion'],
       mainImages: ['/p1-1.png', '/p1-1.png', '/p1-1.png'],
-      thumbnails: ['/p1-1.png', '/p1-1.png', '/p1-1.png'],
       link: '#'
     },
     {
@@ -33,7 +31,6 @@ const FeaturedProjects = () => {
       description: 'Real-time analytics and insights for social media management and growth',
       tags: ['React', 'TypeScript', 'API'],
       mainImages: ['/p1-1.png', '/p1-1.png', '/p1-1.png'],
-      thumbnails: ['/p1-1.png', '/p1-1.png', '/p1-1.png'],
       link: '#'
     }
   ];
@@ -97,19 +94,7 @@ const FeaturedProjects = () => {
                 </h3>
               </div>
 
-              {/* Thumbnail Images */}
-              <div className="grid grid-cols-3 gap-2 px-4 pb-4">
-                {project.thumbnails.map((img, idx) => (
-                  <div key={idx} className="relative aspect-4/3 overflow-hidden rounded">
-                    <Image
-                      src={img}
-                      alt={`${project.title} - Thumbnail ${idx + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
+              
 
               {/* Hover Overlay */}
               <div
@@ -166,7 +151,7 @@ const FeaturedProjects = () => {
 };
 
 export default FeaturedProjects;
-import Contact from '@/components/Contact';
+import Contact from '@/components/Homepage/Contact';
 
 // Then in your component:
 <Contact />

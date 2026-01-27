@@ -26,17 +26,17 @@ const Contact = () => {
   };
 
   return (
-    <section className="min-h-screen py-20 px-4 md:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto">
+    <section className="min-h-screen flex items-center justify-center px-4 md:px-8 lg:px-16 py-20">
+      <div className="max-w-6xl w-full mx-auto">
         {/* Header Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           <div>
-            <h2 className="text-6xl md:text-7xl lg:text-8xl font-normal leading-tight">
+            <h2 className="text-5xl md:text-6xl font-normal leading-tight tracking-tight">
               GET IN<br />TOUCH
             </h2>
           </div>
-          <div className="flex items-end justify-end">
-            <p className="text-sm md:text-base text-right max-w-md opacity-70">
+          <div className="flex items-end justify-end lg:justify-end">
+            <p className="text-xs md:text-sm text-right leading-relaxed opacity-60">
               Have a project in mind<br />
               or want to collaborate?<br />
               Feel free to reach out!
@@ -45,12 +45,12 @@ const Contact = () => {
         </div>
 
         {/* Form Section */}
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Column */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             {/* Name Field */}
             <div>
-              <label htmlFor="name" className="block text-sm mb-2">
+              <label htmlFor="name" className="block text-xs mb-3 opacity-80">
                 Your Name*
               </label>
               <input
@@ -61,19 +61,18 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="John Doe"
                 required
-                className="w-full px-4 py-3 text-sm rounded border-2 transition-all focus:outline-none focus:border-opacity-100"
+                className="w-full px-5 py-4 text-sm border-0 transition-all focus:outline-none focus:ring-2 focus:ring-opacity-50"
                 style={{
-                  backgroundColor: 'var(--background)',
+                  backgroundColor: 'rgba(128, 128, 128, 0.1)',
                   color: 'var(--foreground)',
-                  borderColor: 'var(--foreground)',
-                  borderOpacity: '0.2'
+                  borderRadius: '4px'
                 }}
               />
             </div>
 
             {/* Email Field */}
             <div>
-              <label htmlFor="email" className="block text-sm mb-2">
+              <label htmlFor="email" className="block text-xs mb-3 opacity-80">
                 Your Email*
               </label>
               <input
@@ -84,19 +83,18 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="john@gmail.com"
                 required
-                className="w-full px-4 py-3 text-sm rounded border-2 transition-all focus:outline-none focus:border-opacity-100"
+                className="w-full px-5 py-4 text-sm border-0 transition-all focus:outline-none focus:ring-2 focus:ring-opacity-50"
                 style={{
-                  backgroundColor: 'var(--background)',
+                  backgroundColor: 'rgba(128, 128, 128, 0.1)',
                   color: 'var(--foreground)',
-                  borderColor: 'var(--foreground)',
-                  borderOpacity: '0.2'
+                  borderRadius: '4px'
                 }}
               />
             </div>
 
             {/* Subject Field */}
             <div>
-              <label htmlFor="subject" className="block text-sm mb-2">
+              <label htmlFor="subject" className="block text-xs mb-3 opacity-80">
                 Subject*
               </label>
               <input
@@ -107,22 +105,21 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="amar meyer sathe tomake biye dite cai!"
                 required
-                className="w-full px-4 py-3 text-sm rounded border-2 transition-all focus:outline-none focus:border-opacity-100"
+                className="w-full px-5 py-4 text-sm border-0 transition-all focus:outline-none focus:ring-2 focus:ring-opacity-50"
                 style={{
-                  backgroundColor: 'var(--background)',
+                  backgroundColor: 'rgba(128, 128, 128, 0.1)',
                   color: 'var(--foreground)',
-                  borderColor: 'var(--foreground)',
-                  borderOpacity: '0.2'
+                  borderRadius: '4px'
                 }}
               />
             </div>
           </div>
 
           {/* Right Column */}
-          <div className="space-y-6">
+          <div className="space-y-8 flex flex-col">
             {/* Message Field */}
-            <div>
-              <label htmlFor="message" className="block text-sm mb-2">
+            <div className="flex-1">
+              <label htmlFor="message" className="block text-xs mb-3 opacity-80">
                 Message*
               </label>
               <textarea
@@ -132,29 +129,28 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Tell me about your daughters specification!"
                 required
-                rows="8"
-                className="w-full px-4 py-3 text-sm rounded border-2 transition-all focus:outline-none focus:border-opacity-100 resize-none"
+                className="w-full h-[calc(100%-2rem)] min-h-50 px-5 py-4 text-sm border-0 transition-all focus:outline-none focus:ring-2 focus:ring-opacity-50 resize-none"
                 style={{
-                  backgroundColor: 'var(--background)',
+                  backgroundColor: 'rgba(128, 128, 128, 0.1)',
                   color: 'var(--foreground)',
-                  borderColor: 'var(--foreground)',
-                  borderOpacity: '0.2'
+                  borderRadius: '4px'
                 }}
               />
             </div>
 
             {/* Submit Button */}
-            <div className="flex justify-start">
+            <div className="flex justify-end">
               <button
                 type="submit"
-                className="px-8 py-3 text-sm font-medium flex items-center gap-2 transition-all hover:opacity-80 rounded"
+                className="px-10 py-4 text-sm font-medium flex items-center gap-3 transition-all hover:opacity-80"
                 style={{
                   backgroundColor: 'var(--foreground)',
-                  color: 'var(--background)'
+                  color: 'var(--background)',
+                  borderRadius: '4px'
                 }}
               >
                 Send Message
-                <Send size={18} />
+                <Send size={16} />
               </button>
             </div>
           </div>

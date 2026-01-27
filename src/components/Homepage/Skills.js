@@ -19,7 +19,8 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-20 px-4 md:px-0">
+    <section className="py-20 px-4 md:px-8">
+      <div className="max-w-6xl mx-auto">
       <div className="flex justify-between items-start mb-12">
         <div>
           <h2 className="text-3xl md:text-4xl font-bold">TECHNICAL</h2>
@@ -83,6 +84,7 @@ const Skills = () => {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );
