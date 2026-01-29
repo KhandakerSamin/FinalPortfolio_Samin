@@ -37,7 +37,7 @@ const FeaturedProjects = () => {
 
   return (
     <section id="projects" className="py-20 px-4 md:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl  mx-auto">
         {/* Section Header */}
         <div className="mb-16">
           <h2 className="text-5xl font-bold mb-4">
@@ -53,30 +53,16 @@ const FeaturedProjects = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="relative group cursor-pointer overflow-hidden rounded-lg bg-white dark:bg-gray-900"
+              className="relative group cursor-pointer overflow-hidden rounded-lg bg-gray-100 dark:background"
               onMouseEnter={() => setHoveredCard(project.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              {/* Card Header with Logo and Icons */}
-              <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
-                <div className="bg-white dark:bg-gray-800 px-3 py-1.5 rounded shadow-md">
-                  <div className="text-red-600 text-xs font-bold">FEATURED</div>
-                  <div className="text-[10px] font-semibold">PROJECT</div>
-                </div>
-                <div className="flex gap-2">
-                  <button className="w-8 h-8 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                    <Search size={14} />
-                  </button>
-                  <button className="w-8 h-8 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                    <Heart size={14} />
-                  </button>
-                </div>
-              </div>
+             
 
               {/* Main Images Row */}
-              <div className="grid grid-cols-3 gap-2 p-4 pt-16">
+              <div className="grid grid-cols-3 min-h-150 ml-26 py-10">
                 {project.mainImages.map((img, idx) => (
-                  <div key={idx} className="relative aspect-4/3 overflow-hidden rounded-lg">
+                  <div key={idx} className="relative w-4/6  overflow-hidden rounded-lg">
                     <Image
                       src={img}
                       alt={`${project.title} - Image ${idx + 1}`}
@@ -87,12 +73,7 @@ const FeaturedProjects = () => {
                 ))}
               </div>
 
-              {/* Project Title */}
-              <div className="px-4 py-3">
-                <h3 className="text-lg font-bold uppercase tracking-wide">
-                  {project.title}
-                </h3>
-              </div>
+             
 
               
 
