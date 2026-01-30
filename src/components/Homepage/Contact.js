@@ -26,7 +26,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 md:px-8 lg:px-16 py-20">
+    <section id="about" className="min-h-screen flex items-center justify-center px-4 md:px-8 lg:px-16 py-20">
       <div className="max-w-6xl w-full mx-auto">
         {/* Header Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">

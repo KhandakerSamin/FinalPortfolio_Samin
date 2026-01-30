@@ -4,7 +4,7 @@ import { Eye, FileText } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="h-screen flex items-center justify-center">
+    <section id="home" className="h-screen flex items-center justify-center">
       <div className="max-w-6xl mx-auto w-full px-4 md:px-8">
         <div className="text-center">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal mb-2">

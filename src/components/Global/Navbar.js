@@ -2,12 +2,15 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import {  ArrowRight, CornerDownRight } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const [time, setTime] = useState('');
   const [date, setDate] = useState('');
+  const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const updateDateTime = () => {
@@ -38,30 +41,58 @@ const Navbar = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'projects', 'about'];
+      const scrollPosition = window.scrollY + 200;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
       {/* Top Left - Navigation Links */}
       <nav className="fixed top-6 left-6 z-50 flex flex-col gap-3 text-sm">
         <Link 
           href="/" 
-          className="hover:opacity-70 transition-opacity flex items-center gap-2"
+          className={`flex items-center gap-2 transition-opacity duration-300 ${
+            activeSection === 'home' ? 'opacity-40' : 'hover:opacity-50'
+          }`}
         >
           <CornerDownRight size={14} />
           <span>HOME</span>
         </Link>
         <Link 
           href="#projects" 
-          className="hover:opacity-70 transition-opacity flex items-center gap-2"
+          className={`flex items-center gap-2 transition-opacity duration-300 ${
+            activeSection === 'projects' ? 'opacity-40' : 'hover:opacity-50'
+          }`}
         >
           <CornerDownRight size={14} />
           <span>PROJECTS</span>
         </Link>
         <Link 
           href="#about" 
-          className="hover:opacity-70 transition-opacity flex items-center gap-2"
+          className={`flex items-center gap-2 transition-opacity duration-300 ${
+            activeSection === 'about' ? 'opacity-40' : 'hover:opacity-50'
+          }`}
         >
-          <CornerDownRight
-            size={14}/>
+          <CornerDownRight size={14} />
           <span>ABOUT</span>
         </Link>
       </nav>

@@ -18,15 +18,15 @@
 }
 
 * {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="%23000000" opacity="0.8"/><circle cx="12" cy="12" r="2" fill="%23ffffff"/></svg>') 12 12, auto !important;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M 12 2 L 12 22 M 2 12 L 22 12" stroke="%23000000" stroke-width="2" opacity="0.8"/><rect x="10" y="10" width="4" height="4" fill="%23000000"/></svg>') 12 12, auto !important;
 }
 
 :root[data-theme="dark"] * {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="%23ffffff" opacity="0.8"/><circle cx="12" cy="12" r="2" fill="%23000000"/></svg>') 12 12, auto !important;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M 12 2 L 12 22 M 2 12 L 22 12" stroke="%23ffffff" stroke-width="2" opacity="0.9"/><rect x="10" y="10" width="4" height="4" fill="%23ffffff"/></svg>') 12 12, auto !important;
 }
 
 a, button, [role="button"], input[type="submit"], input[type="button"], [onclick] {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="7" fill="%23000000" opacity="0.6"/><circle cx="12" cy="12" r="4" fill="%23ffffff"/></svg>') 12 12, pointer !important;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M 16 4 L 16 28 M 4 16 L 28 16" stroke="%23000000" stroke-width="3" opacity="0.7"/><path d="M 8 8 L 24 24 M 24 8 L 8 24" stroke="%23000000" stroke-width="2" opacity="0.5"/><rect x="13" y="13" width="6" height="6" fill="%23000000"/></svg>') 16 16, pointer !important;
 }
 
 :root[data-theme="dark"] a, 
@@ -35,7 +35,17 @@ a, button, [role="button"], input[type="submit"], input[type="button"], [onclick
 :root[data-theme="dark"] input[type="submit"], 
 :root[data-theme="dark"] input[type="button"],
 :root[data-theme="dark"] [onclick] {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="7" fill="%23ffffff" opacity="0.6"/><circle cx="12" cy="12" r="4" fill="%23000000"/></svg>') 12 12, pointer !important;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M 16 4 L 16 28 M 4 16 L 28 16" stroke="%23ffffff" stroke-width="3" opacity="0.8"/><path d="M 8 8 L 24 24 M 24 8 L 8 24" stroke="%23ffffff" stroke-width="2" opacity="0.5"/><rect x="13" y="13" width="6" height="6" fill="%23ffffff"/></svg>') 16 16, pointer !important;
+}
+
+button, [role="button"], input[type="submit"], input[type="button"] {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+button:hover, [role="button"]:hover, input[type="submit"]:hover, input[type="button"]:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 body {
