@@ -11,10 +11,10 @@ import Contact from '@/components/Homepage/Contact';
 const page = () => {
   return (
     <div className="min-h-screen">
-      {/* Sticky Logo (top center) */}
+      {/* Sticky Logo (top center) - Shows on load, hides on scroll */}
       <Logo />
-      
-      {/* Sticky Navigation (corners) */}
+        
+        {/* Sticky Navigation (corners) */}
       <Navbar />
       
       {/* Sticky Footer (bottom corners) */}
