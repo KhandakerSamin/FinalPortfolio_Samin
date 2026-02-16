@@ -13,21 +13,21 @@ const FeaturedProjects = () => {
       id: 1,
       title: 'Lebanese Grill House',
       description: 'Comfortable with API tools and exploring Lebanese learning integration in web applications',
-      image: '/p1-1.png',
+      image: '/p1-Home.jpg',
       link: '#'
     },
     {
       id: 2,
       title: 'Portfolio Website',
       description: 'A sleek and modern portfolio showcasing creative work and technical expertise',
-      image: '/p1-1.png',
+      image: '/p1-Home.jpg',
       link: '#'
     },
     {
       id: 3,
       title: 'Social Media Dashboard',
       description: 'Real-time analytics and insights for social media management and growth',
-      image: '/p1-1.png',
+      image: '/p1-Home.jpg',
       link: '#'
     }
   ];
@@ -57,11 +57,12 @@ const FeaturedProjects = () => {
             >
               {/* Main Image - Center */}
               <div className="relative w-full h-full flex items-center justify-center p-8 transition-transform duration-500">
-                <div className="relative w-full max-w-2xl h-96">
+                <div className="relative   max-w-3xl w-2/5 h-full">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
+                    quality={100}
                     className="object-cover rounded-lg transition-transform duration-500"
                   />
                 </div>
