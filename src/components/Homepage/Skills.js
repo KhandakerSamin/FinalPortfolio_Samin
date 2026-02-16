@@ -26,7 +26,7 @@ const Skills = () => {
           <h2 className="text-xl md:text-[32px] font-medium">TECHNICAL</h2>
           <h2 className="text-xl md:text-[32px] font-medium">SKILLS & TOOLS</h2>
         </div>
-        <p className="text-right text-base text-[#0A5A61] max-w-xs opacity-70">
+        <p className="text-right text-base max-w-xs opacity-70">
           Comfortable with AI tools<br />
           and exploring machine<br />
           learning integration in web<br />
@@ -39,7 +39,7 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="bg-white bg-opacity-5 backdrop-blur-sm border border-current border-opacity-20 rounded-lg p-6 hover:bg-opacity-10 transition-all"
+            className="skill-card-item rounded-lg p-6 transition-all"
           >
             <div className="flex items-center gap-3">
               {skill.icon === 'JS' ? (
@@ -60,7 +60,7 @@ const Skills = () => {
         {secondRow.map((skill, index) => (
           <div
             key={index}
-            className="bg-white bg-opacity-5 backdrop-blur-sm border border-current border-opacity-20 rounded-lg p-6 hover:bg-opacity-10 transition-all"
+            className="skill-card-item rounded-lg p-6 transition-all"
           >
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 bg-yellow-400 text-black rounded flex items-center justify-center text-sm font-bold">
@@ -73,7 +73,7 @@ const Skills = () => {
       </div>
 
       {/* Third Row - Tools */}
-      <div className="bg-white bg-opacity-5 backdrop-blur-sm border border-current border-opacity-20 rounded-lg p-6">
+      <div className="skill-card-item rounded-lg p-6">
         <div className="flex flex-wrap items-center gap-6">
           {tools.map((tool, index) => (
             <div key={index} className="flex items-center gap-2 hover:opacity-70 transition-opacity">

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Eye, FileText } from 'lucide-react';
+import { Code, Eye, FileText } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -19,19 +19,19 @@ const Hero = () => {
             href="#projects"
             className="px-8 py-3 text-sm transition-all hover:opacity-80 flex items-center gap-2 rounded"
             style={{ 
-              backgroundColor: 'var(--foreground)',
+              borderColor: 'var(--foreground)',
               color: 'var(--background)',
-                            backgroundColor: 'transparent'
+              backgroundColor: 'var(--foreground)'
 
             }}
           >
-            <Eye size={18} />
+            <Code  size={18} />
             See Project
           </Link>
           
           <Link 
             href="/resume"
-            className="px-8 py-3 text-sm font-medium border-2 transition-all hover:opacity-80 flex items-center gap-2 rounded"
+            className="px-8 py-3 text-sm font-medium border transition-all hover:opacity-80 flex items-center gap-2 rounded"
             style={{ 
               borderColor: 'var(--foreground)',
               color: 'var(--foreground)',

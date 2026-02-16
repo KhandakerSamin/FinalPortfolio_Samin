@@ -40,7 +40,7 @@ const FeaturedProjects = () => {
           <h2 className="text-[32px] font-medium mb-4">
             FEATURED<br />PROJECTS
           </h2>
-          <p className="text-base text-[#0A5A61] opacity-70 text-right  max-w-xs">
+          <p className="text-base  opacity-70 text-right  max-w-xs">
             Transforming ideas into dynamic, user-friendly digital experiences with modern web technologies
           </p>
         </div>

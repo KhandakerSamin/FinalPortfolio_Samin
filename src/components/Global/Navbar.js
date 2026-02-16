@@ -100,8 +100,8 @@ const Navbar = () => {
       {/* Top Right - Location, Date, Time, and Theme Toggle */}
       <div className="fixed top-6 right-6 z-50 flex flex-col items-end gap-2 text-sm">
         <div className="font-medium">DHAKA, BD</div>
-        <div className="text-xs opacity-80">{date}</div>
-        <div className="font-mono text-base tabular-nums">
+        <div className=" opacity-80">{date}</div>
+        <div className="font-mono opacity-80 tabular-nums">
           {time}
         </div>
         <ThemeToggle />
