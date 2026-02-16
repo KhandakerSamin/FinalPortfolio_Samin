@@ -20,7 +20,9 @@ const Hero = () => {
             className="px-8 py-3 text-sm transition-all hover:opacity-80 flex items-center gap-2 rounded"
             style={{ 
               backgroundColor: 'var(--foreground)',
-              color: 'var(--background)'
+              color: 'var(--background)',
+                            backgroundColor: 'transparent'
+
             }}
           >
             <Eye size={18} />
