@@ -23,10 +23,10 @@ const Skills = () => {
       <div className="max-w-6xl mx-auto">
       <div className="flex justify-between items-start mb-12">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold">TECHNICAL</h2>
-          <h2 className="text-3xl md:text-4xl font-bold">SKILLS & TOOLS</h2>
+          <h2 className="text-xl md:text-[32px] font-medium">TECHNICAL</h2>
+          <h2 className="text-xl md:text-[32px] font-medium">SKILLS & TOOLS</h2>
         </div>
-        <p className="text-right text-sm opacity-80 max-w-xs italic">
+        <p className="text-right text-base text-[#0A5A61] max-w-xs opacity-70">
           Comfortable with AI tools<br />
           and exploring machine<br />
           learning integration in web<br />

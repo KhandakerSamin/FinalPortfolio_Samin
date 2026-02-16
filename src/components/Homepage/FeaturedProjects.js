@@ -18,14 +18,14 @@ const FeaturedProjects = () => {
     },
     {
       id: 2,
-      title: 'Portfolio Website',
+      title: 'Data Science Lab, DIU',
       description: 'A sleek and modern portfolio showcasing creative work and technical expertise',
       image: '/p1-Home.jpg',
       link: '#'
     },
     {
       id: 3,
-      title: 'Social Media Dashboard',
+      title: 'SlideLink',
       description: 'Real-time analytics and insights for social media management and growth',
       image: '/p1-Home.jpg',
       link: '#'
@@ -36,11 +36,11 @@ const FeaturedProjects = () => {
     <section id="projects" className="py-20 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="mb-16">
-          <h2 className="text-5xl font-bold mb-4">
+        <div className="mb-16 flex justify-between items-center">
+          <h2 className="text-[32px] font-medium mb-4">
             FEATURED<br />PROJECTS
           </h2>
-          <p className="text-sm opacity-60 max-w-md">
+          <p className="text-base text-[#0A5A61] opacity-70 text-right  max-w-xs">
             Transforming ideas into dynamic, user-friendly digital experiences with modern web technologies
           </p>
         </div>
