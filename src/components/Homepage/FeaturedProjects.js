@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 const FeaturedProjects = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -72,7 +72,7 @@ const FeaturedProjects = () => {
               <div className={`absolute bottom-8 left-8 flex items-center gap-2 transition-all duration-300 project-text ${
                 hoveredCard === project.id ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'
               }`}>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowUpRight className="w-4 h-4" />
                 <span className="text-sm font-medium">See Project</span>
               </div>
 
@@ -98,7 +98,7 @@ const FeaturedProjects = () => {
                     href={project.link}
                     className="flex items-center gap-2 text-white hover:opacity-70 transition-opacity mt-4"
                   >
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowUpRight className="w-4 h-4" />
                     <span className="text-sm font-medium">See Project</span>
                   </Link>
                 </div>
