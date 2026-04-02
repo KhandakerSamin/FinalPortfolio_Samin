@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import {  ArrowRight, CornerDownRight } from 'lucide-react';
+import { CornerDownRight } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
@@ -11,6 +11,8 @@ const Navbar = () => {
   const [date, setDate] = useState('');
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState('home');
+  const isHomePage = pathname === '/';
+  const activeNav = isHomePage ? activeSection : pathname === '/about' ? 'about' : 'home';
 
   useEffect(() => {
     const updateDateTime = () => {
@@ -42,6 +44,10 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
+    if (!isHomePage) {
+      return undefined;
+    }
+
     const handleScroll = () => {
       const sections = ['home', 'projects', 'about'];
       const scrollPosition = window.scrollY + 200;
@@ -62,7 +68,7 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHomePage]);
 
   return (
     <>
@@ -71,25 +77,25 @@ const Navbar = () => {
         <Link 
           href="/" 
           className={`flex items-center gap-2 transition-opacity duration-300 ${
-            activeSection === 'home' ? 'opacity-40' : 'hover:opacity-50'
+            activeNav === 'home' ? 'opacity-40' : 'hover:opacity-50'
           }`}
         >
           <CornerDownRight size={14} />
           <span>HOME</span>
         </Link>
         <Link 
-          href="#projects" 
+          href={isHomePage ? '#projects' : '/#projects'} 
           className={`flex items-center gap-2 transition-opacity duration-300 ${
-            activeSection === 'projects' ? 'opacity-40' : 'hover:opacity-50'
+            activeNav === 'projects' ? 'opacity-40' : 'hover:opacity-50'
           }`}
         >
           <CornerDownRight size={14} />
           <span>PROJECTS</span>
         </Link>
         <Link 
-          href="#about" 
+          href="/about" 
           className={`flex items-center gap-2 transition-opacity duration-300 ${
-            activeSection === 'about' ? 'opacity-40' : 'hover:opacity-50'
+            activeNav === 'about' ? 'opacity-40' : 'hover:opacity-50'
           }`}
         >
           <CornerDownRight size={14} />
